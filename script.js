@@ -18,14 +18,20 @@ let rotateRightValue = -45,
 let canvas = document.createElement("canvas");
 
 navigator.mediaDevices
-  .getUserMedia({ video: { facingMode: 'environment' width: { ideal: 1920 },
-          height: { ideal: 1080 }} }) // Use back camera
+  .getUserMedia({ 
+      video: { 
+          facingMode: 'environment',
+          width: { ideal: 1920 },
+          height: { ideal: 1080 }
+      } 
+  })
   .then(function (stream) {
     video.srcObject = stream;
   })
   .catch(function (err) {
     console.log("Something went wrong!");
   });
+
 
 uploadIcon.classList.add("hide");
 imageIcon.classList.add("hide");
