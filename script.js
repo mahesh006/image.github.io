@@ -18,7 +18,7 @@ let rotateRightValue = -45,
 let canvas = document.createElement("canvas");
 
 navigator.mediaDevices
-  .getUserMedia({ video: true })
+  .getUserMedia({ video: { facingMode: 'environment' } }) // Use back camera
   .then(function (stream) {
     video.srcObject = stream;
   })
