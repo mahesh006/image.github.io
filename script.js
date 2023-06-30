@@ -21,8 +21,6 @@ navigator.mediaDevices
   .getUserMedia({ 
       video: { 
           facingMode: 'environment',
-          width: { ideal: 1920 },
-          height: { ideal: 1080 }
       } 
   })
   .then(function (stream) {
